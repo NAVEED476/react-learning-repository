@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
 import "../App.css";
-const axios = require("axios");
+import axios from "axios"
 
 export default function Admin() {
   const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ export default function Admin() {
   const deleteHandle = (name) => {
     const newList = value.filter((item) => item.name !== name);
     setValue([...newList]);
-  };
+  };    
 
   return (
     <div className="container my-3">
@@ -55,7 +55,7 @@ export default function Admin() {
                 className="form-check-input "
                 type="checkbox"
                 aria-label="Checkbox for following text input"
-              />
+              />  
             </th>
             <th scope="col">Name</th>
             <th scope="col">Eamil</th>
